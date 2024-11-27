@@ -1,0 +1,48 @@
+/* Background Style */
+  
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-image: url('assets /201877786-gym-or-fitness-with-sunset-light-background-for-web-design-template-website.jpg'); /* Path to your image file */
+  background-size: cover; /* Makes the image cover the entire background */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image */
+  font-family: Arial, sans-serif; /* Optional font styling */
+  color: white; /* Changes text color to make it visible over the image */
+}
+
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    padding: 100px 20px;
+    background: rgba(0, 0, 0, 0.6); /* Slight transparency for text visibility */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  /* Cards */
+  .card {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border: none; /* Remove default borders */
+    border-radius: 8px; /* Rounded corners */
+    background-color: white;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #2d3748;
+    color: white;
+  }
+
+  /* Caloric Calculator */
+
+  form {
+    margin: 20px 0;
+  }
+  
+  #result {
+    text-align: center;
+  }
+  
+  
