@@ -14,8 +14,140 @@ const routes = {
     blog: `
       <div>
         <h2>Fitness Blog Articles</h2>
-        <div class="row" id="blogPosts">
-          <!-- Blog posts will be dynamically added here -->
+  
+        <!-- Popular Posts Section -->
+        <h3>Popular Posts</h3>
+        <div class="row" id="popularPosts">
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/240x205" class="card-img-top" alt="Popular Post 1">
+              <div class="card-body">
+                <h5 class="card-title">Top 10 Cardio Workouts</h5>
+                <p class="card-text">A great article on how to incorporate cardio into your workout routine.</p>
+                <a href="article1.html" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/240x205" class="card-img-top" alt="Popular Post 2">
+              <div class="card-body">
+                <h5 class="card-title">Best Full-Body Workouts</h5>
+                <p class="card-text">Effective full-body workout routines to build strength and stamina.</p>
+                <a href="article2.html" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/240x205" class="card-img-top" alt="Popular Post 3">
+              <div class="card-body">
+                <h5 class="card-title">How to Stay Consistent in Fitness</h5>
+                <p class="card-text">Tips for staying consistent with your fitness routine long-term.</p>
+                <a href="article3.html" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/240x205" class="card-img-top" alt="Popular Post 4">
+              <div class="card-body">
+                <h5 class="card-title">Best Foods for Muscle Recovery</h5>
+                <p class="card-text">Foods to fuel your recovery and improve muscle growth.</p>
+                <a href="article4.html" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Latest Posts Section -->
+        <h3>Latest Posts</h3>
+        <div class="row" id="latestPosts">
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/240x205" class="card-img-top" alt="Latest Post 1">
+              <div class="card-body">
+                <h5 class="card-title">Meal Plans for Muscle Gain</h5>
+                <p class="card-text">Learn the best meal plans for muscle growth and strength.</p>
+                <a href="article5.html" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/240x205" class="card-img-top" alt="Latest Post 2">
+              <div class="card-body">
+                <h5 class="card-title">Strength Training for Beginners</h5>
+                <p class="card-text">A beginner's guide to strength training exercises.</p>
+                <a href="article6.html" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/240x205" class="card-img-top" alt="Latest Post 3">
+              <div class="card-body">
+                <h5 class="card-title">Cardio Myths Busted</h5>
+                <p class="card-text">Debunking common myths around cardio workouts.</p>
+                <a href="article7.html" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/240x205" class="card-img-top" alt="Latest Post 4">
+              <div class="card-body">
+                <h5 class="card-title">Yoga for Flexibility</h5>
+                <p class="card-text">The benefits of yoga to improve flexibility and strength.</p>
+                <a href="article8.html" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Categories Section -->
+        <h3>Categories</h3>
+        <div class="row" id="categories">
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/240x205" class="card-img-top" alt="Category 1">
+              <div class="card-body">
+                <h5 class="card-title">Strength Training</h5>
+                <p class="card-text">Explore strength training exercises for every level.</p>
+                <a href="category1.html" class="btn btn-primary">Explore</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/240x205" class="card-img-top" alt="Category 2">
+              <div class="card-body">
+                <h5 class="card-title">Cardio Workouts</h5>
+                <p class="card-text">Find cardio workouts to boost endurance and burn fat.</p>
+                <a href="category2.html" class="btn btn-primary">Explore</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/240x205" class="card-img-top" alt="Category 3">
+              <div class="card-body">
+                <h5 class="card-title">Nutrition Tips</h5>
+                <p class="card-text">Explore healthy nutrition tips for a balanced life.</p>
+                <a href="category3.html" class="btn btn-primary">Explore</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/240x205" class="card-img-top" alt="Category 4">
+              <div class="card-body">
+                <h5 class="card-title">Fitness Challenges</h5>
+                <p class="card-text">Take on fitness challenges to test your strength.</p>
+                <a href="category4.html" class="btn btn-primary">Explore</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     `,
@@ -41,22 +173,6 @@ const routes = {
     `
   };
   
-  // Static blogs added directly in the JS file
-  let blogs = [
-    {
-      title: "Top 10 Cardio Workouts",
-      content: "Cardio workouts are a great way to burn fat and improve cardiovascular health. Here are some of the best cardio exercises to incorporate into your routine..."
-    },
-    {
-      title: "Benefits of Strength Training",
-      content: "Strength training is essential for building muscle, improving bone density, and boosting metabolism. Learn how strength training can benefit your overall health..."
-    },
-    {
-      title: "Meal Plans for Muscle Gain",
-      content: "Gaining muscle requires the right nutrition. Here's a sample meal plan that can help you gain muscle mass while staying healthy and balanced..."
-    }
-  ];
-  
   // Function to navigate between pages and set dynamic background images
   function navigate(route) {
     const appDiv = document.getElementById('app');
@@ -74,7 +190,6 @@ const routes = {
         break;
       case 'blog':
         backgroundContainer.style.backgroundImage = "url('./assets/images/blog-bg.jpg')";
-        displayBlogs(); // Display blogs when on the blog page
         break;
       case 'contact':
         backgroundContainer.style.backgroundImage = "url('./assets/images/contact-bg.jpg')";
@@ -87,59 +202,6 @@ const routes = {
     backgroundContainer.style.backgroundSize = "cover";
     backgroundContainer.style.backgroundPosition = "center";
     backgroundContainer.style.backgroundRepeat = "no-repeat";
-  }
-  
-  // Function to display all blogs in a card format
-  function displayBlogs() {
-    const blogContainer = document.getElementById('blogPosts');
-    blogContainer.innerHTML = ""; // Clear existing posts
-  
-    if (blogs.length === 0) {
-      blogContainer.innerHTML = "<p>No blog posts yet. Add some!</p>";
-      return;
-    }
-  
-    blogs.forEach((blog, index) => {
-      blogContainer.innerHTML += `
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">${blog.title}</h5>
-              <p class="card-text">${blog.content}</p>
-            </div>
-            <div class="card-footer text-muted">
-              <button class="btn btn-info" onclick="editBlog(${index})">Edit</button>
-              <button class="btn btn-danger" onclick="deleteBlog(${index})">Delete</button>
-            </div>
-          </div>
-        </div>
-      `;
-    });
-  }
-  
-  // Function to add a new blog post
-  function addBlog(title, content) {
-    blogs.push({ title, content });
-    displayBlogs();
-  }
-  
-  // Function to edit a blog post (not implemented in detail here)
-  function editBlog(index) {
-    const blog = blogs[index];
-    const newTitle = prompt("Edit Title:", blog.title);
-    const newContent = prompt("Edit Content:", blog.content);
-    if (newTitle && newContent) {
-      blogs[index] = { title: newTitle, content: newContent };
-      displayBlogs();
-    }
-  }
-  
-  // Function to delete a blog post
-  function deleteBlog(index) {
-    if (confirm("Are you sure you want to delete this blog?")) {
-      blogs.splice(index, 1);
-      displayBlogs();
-    }
   }
   
   // Event listener for navigation
@@ -155,17 +217,5 @@ const routes = {
         navigate(route);
       });
     });
-  
-    // To add new blogs, simply modify the `blogs` array directly in the script
-    // For example:
-    // addBlog("New Blog Title", "New blog content...");
-  });
-
-//   Add New Blogs
-
-
-blogs.push({
-    title: "TEST",
-    content: "test."
   });
   
