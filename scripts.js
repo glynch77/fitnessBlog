@@ -1,94 +1,67 @@
-// // Section 1: Caloric Calculator
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const form = document.getElementById("calorieForm");
-//   const calculateBtn = document.getElementById("calculateBtn");
-//   const resultDiv = document.getElementById("result");
-
-//   calculateBtn.addEventListener("click", () => {
-//     // Get form values
-//     const age = parseInt(document.getElementById("age").value, 10);
-//     const weight = parseFloat(document.getElementById("weight").value);
-//     const height = parseFloat(document.getElementById("height").value);
-//     const activity = parseFloat(document.getElementById("activity").value);
-
-//     if (isNaN(age) || isNaN(weight) || isNaN(height)) {
-//       resultDiv.innerHTML = `<p class="text-danger">Please fill in all fields with valid values.</p>`;
-//       return;
-//     }
-
-//     // Gender selection (add radio buttons if needed)
-//     const gender = "male"; // Default to male for now
-
-//     // Calculate BMR
-//     let bmr;
-//     if (gender === "male") {
-//       bmr = 10 * weight + 6.25 * height - 5 * age + 5;
-//     } else {
-//       bmr = 10 * weight + 6.25 * height - 5 * age - 161;
-//     }
-
-//     // Calculate TDEE
-//     const tdee = bmr * activity;
-
-//     // Display result
-//     resultDiv.innerHTML = `
-//         <div class="alert alert-success">
-//           <h5>Your Caloric Needs</h5>
-//           <p>BMR: <strong>${bmr.toFixed(2)}</strong> calories/day</p>
-//           <p>Total Daily Energy Expenditure (TDEE): <strong>${tdee.toFixed(
-//             2
-//           )}</strong> calories/day</p>
-//         </div>
-//       `;
-//   });
-// });
-
-// //   Section 2 BMI Calculator
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const bmiForm = document.getElementById("bmiForm");
-//   const calculateBtn = document.getElementById("calculateBMI");
-//   const resultDiv = document.getElementById("bmiResult");
-
-//   calculateBtn.addEventListener("click", () => {
-//     // Get form values
-//     const weight = parseFloat(document.getElementById("weight").value);
-//     const height = parseFloat(document.getElementById("height").value);
-
-//     if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
-//       resultDiv.innerHTML = `<p class="text-danger">Please enter valid positive values for weight and height.</p>`;
-//       return;
-//     }
-
-//     // Convert weight from pounds to kilograms
-//     const weightInKg = weight * 0.453592;
-
-//     // Convert height from inches to meters
-//     const heightInMeters = height * 0.0254;
-
-//     // Calculate BMI
-//     const bmi = weightInKg / heightInMeters ** 2;
-
-//     // Determine BMI category
-//     let category = "";
-//     if (bmi < 18.5) {
-//       category = "Underweight";
-//     } else if (bmi >= 18.5 && bmi < 24.9) {
-//       category = "Normal weight";
-//     } else if (bmi >= 25 && bmi < 29.9) {
-//       category = "Overweight";
-//     } else {
-//       category = "Obese";
-//     }
-
-//     // Display result
-//     resultDiv.innerHTML = `
-//         <div class="alert alert-info">
-//           <h5>Your BMI</h5>
-//           <p>BMI: <strong>${bmi.toFixed(2)}</strong></p>
-//           <p>Category: <strong>${category}</strong></p>
-//         </div>
-//       `;
-//   });
-// });
+// JavaScript for SPA routing and content injection
+const routes = {
+    home: `
+      <div class="text-center">
+        <h1>Welcome to Fitness Blog</h1>
+        <p>Your ultimate resource for staying fit and healthy!</p>
+      </div>
+    `,
+    about: `
+      <div>
+        <h2>About Us</h2>
+        <p>We are passionate fitness enthusiasts bringing you the best tips, exercises, and nutrition advice to help you achieve your goals.</p>
+      </div>
+    `,
+    blog: `
+      <div>
+        <h2>Fitness Blog Articles</h2>
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action">Top 10 Cardio Workouts</a>
+          <a href="#" class="list-group-item list-group-item-action">Benefits of Strength Training</a>
+          <a href="#" class="list-group-item list-group-item-action">Meal Plans for Muscle Gain</a>
+        </div>
+      </div>
+    `,
+    contact: `
+      <div>
+        <h2>Contact Us</h2>
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    `
+  };
+  
+  // Function to navigate between pages
+  function navigate(route) {
+    const appDiv = document.getElementById('app');
+    appDiv.innerHTML = routes[route];
+  }
+  
+  // Event listener for navigation
+  document.addEventListener('DOMContentLoaded', () => {
+    // Load default route
+    navigate('home');
+  
+    // Handle navigation links
+    document.querySelectorAll('[data-route]').forEach(link => {
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        const route = link.getAttribute('data-route');
+        navigate(route);
+      });
+    });
+  });
+  
